@@ -1,3 +1,15 @@
+
+# Created by https://www.gitignore.io/api/symfony,composer
+
+### Composer ###
+composer.phar
+/vendor/
+
+# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+### Symfony ###
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -39,3 +51,9 @@
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
+
+### Symfony Patch ###
+/web/css/
+/web/js/
+
+# End of https://www.gitignore.io/api/symfony,composer
