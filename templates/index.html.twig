@@ -1,0 +1,16 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Test{% endblock %}
+
+{% block content %}
+    <h1>Welcome to your new Silex Application!</h1>
+    <div>
+        <h2>Saisir un nom</h2>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_end(form) }}
+    </div>
+    <div style="margin-top:10px;">
+        <a href="{{ path('hellopage', {name: 'test'}) }}">{{ url('hellopage', {name: 'test'}) }}</a>
+    </div>
+{% endblock %}
