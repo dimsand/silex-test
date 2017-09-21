@@ -16,12 +16,9 @@ class MyClassController implements ControllerProviderInterface {
   }
 
   public function home(Application $app, Request $request){
-    $data = array(
-        'name' => 'Your name'
-    );
-
+    $data = array();
     $form = $app['form.factory']->createBuilder(FormType::class, $data)
-        ->add('name', TextType::class, ['label'=>false, 'attr'=>array('placeholder'=>"Votre nom")])
+        ->add('name', TextType::class, ['label'=>false, 'attr'=>array('autocomplete'=>'off', 'placeholder'=>"Votre nom")])
         ->add('submit', SubmitType::class, [
             'label' => 'OK',
         ])
